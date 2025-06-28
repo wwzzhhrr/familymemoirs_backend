@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>验证码通知</title>
+    <style>         body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .container {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 20px;
+    }
+
+    .header {
+        text-align: center;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+
+    .logo {
+        max-width: 150px;
+        height: auto;
+    }
+
+    .code {
+        font-size: 28px;
+        font-weight: bold;
+        color: #1890ff;
+        letter-spacing: 3px;
+        text-align: center;
+        margin: 25px 0;
+        padding: 10px;
+        background-color: #f7f7f7;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    .footer {
+        margin-top: 30px;
+        font-size: 12px;
+        color: #999;
+        text-align: center;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #1890ff;
+        color: white !important;
+        text-decoration: none;
+        border-radius: 4px;
+        margin: 15px 0;
+    }
+
+    @media screen and (max-width: 480px) {
+        .container {
+            padding: 15px;
+        }
+
+        .code {
+            font-size: 24px;
+        }
+    }     </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img src="https://example.com/logo.png" alt="Company Logo" class="logo">
+        <h2>您的验证码</h2></div>
+    <p>尊敬的<strong>用户</strong>：</p>
+    <p>您正在注册/登录测试系统，验证码如下：</p>
+    <div style="text-align: center;">
+        <span class="code">{{code}}</span>
+    </div>
+    <p>该验证码 <span style="color: #ff4d4f;">5分钟内</span> 有效，请勿泄露给他人。</p>
+    <p style="text-align: center;"><a href="#" class="button">立即验证</a></p>
+    <p>如非本人操作，请忽略此邮件。</p>
+    <div class="footer"><p>© 2023 测试公司 版权所有</p>
+        <p>系统自动发送，请勿直接回复</p></div>
+</div>
+</body>
+</html>

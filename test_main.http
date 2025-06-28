@@ -1,0 +1,42 @@
+# 邮件验证码服务 API 测试
+
+# 根路径
+GET http://localhost:8000/
+Accept: application/json
+
+###
+
+# 全局健康检查
+GET http://localhost:8000/health
+Accept: application/json
+
+###
+
+# 邮件模块健康检查
+GET http://localhost:8000/mail/health
+Accept: application/json
+
+###
+
+# 发送验证码
+POST http://localhost:8000/mail/send-verification-code
+Content-Type: application/json
+
+{
+  "to_address": "test@example.com",
+  "subject": "验证码通知",
+  "from_alias": "家书万金"
+}
+
+###
+
+# 验证验证码
+POST http://localhost:8000/mail/verify-code
+Content-Type: application/json
+
+{
+  "address": "test@example.com",
+  "code": "123456"
+}
+
+###
